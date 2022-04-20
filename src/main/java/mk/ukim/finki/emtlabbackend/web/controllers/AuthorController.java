@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+
+// Tekstot na vezbata ne specificirase dali treba da napravime Add, Edit, Delete funkcionalnost na front-end
+// za avtor taka sto samo prikazuvanje imam na vekje postoecki avtori vo bazata.
+
 @RestController
 //@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/authors")
