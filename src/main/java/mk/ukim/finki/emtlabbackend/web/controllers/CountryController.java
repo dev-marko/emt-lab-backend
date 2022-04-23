@@ -2,6 +2,7 @@ package mk.ukim.finki.emtlabbackend.web.controllers;
 
 import mk.ukim.finki.emtlabbackend.domain.entities.Country;
 import mk.ukim.finki.emtlabbackend.service.interfaces.CountryService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +14,7 @@ import java.util.List;
 // za drzava taka sto samo prikazuvanje imam na vekje postoecki drzavi vo bazata.
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/countries")
 public class CountryController {
 

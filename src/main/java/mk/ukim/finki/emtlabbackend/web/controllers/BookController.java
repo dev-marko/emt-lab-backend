@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/books")
 public class BookController {
 
@@ -23,6 +23,13 @@ public class BookController {
     @GetMapping()
     public List<Book> findAll() {
         return this.bookService.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Book> findById(@PathVariable Long id) {
+        return this.bookService.findById(id)
+                .map(book -> ResponseEntity.ok().body(book))
+                .orElseGet(() -> ResponseEntity.badRequest().build());
     }
 
     @PostMapping("/add")
