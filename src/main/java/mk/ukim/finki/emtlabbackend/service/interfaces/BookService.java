@@ -11,10 +11,12 @@ public interface BookService {
 
     // create
     Book save(String name, Category category, Long authorId, Integer availableCopies);
+
     Optional<Book> save(BookDTO bookDTO);
 
     // update
     Book edit(Long id, String name, Category category, Long authorId, Integer availableCopies);
+
     Optional<Book> edit(Long id, BookDTO bookDTO);
 
     // read
@@ -24,5 +26,7 @@ public interface BookService {
 
     // delete
     Book deleteById(Long bookId);
+
+    Optional<Book> markAsTaken(Long bookId);
 
 }
