@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 // za kategorija taka sto samo prikazuvanje imam na vekje postoecki kategorii vo bazata.
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://emt-lab-191128-frontend.herokuapp.com/")
 @RequestMapping("/api/categories")
 public class CategoryController {
 

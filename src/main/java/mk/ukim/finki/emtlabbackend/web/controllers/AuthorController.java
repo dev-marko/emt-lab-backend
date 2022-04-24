@@ -14,7 +14,7 @@ import java.util.List;
 // za avtor taka sto samo prikazuvanje imam na vekje postoecki avtori vo bazata.
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://emt-lab-191128-frontend.herokuapp.com/")
 @RequestMapping("/api/authors")
 public class AuthorController {
 
