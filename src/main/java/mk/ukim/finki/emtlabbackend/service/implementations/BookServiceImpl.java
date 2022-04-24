@@ -84,7 +84,12 @@ public class BookServiceImpl implements BookService {
     @Override
     public Optional<Book> markAsTaken(Long bookId) {
         Book book = this.findById(bookId).orElseThrow(() -> new BookNotFoundException(bookId));
-        book.setAvailableCopies(book.getAvailableCopies() - 1);
+
+        if (book.getAvailableCopies() == 0) {
+            book.setAvailableCopies(0);
+        } else {
+            book.setAvailableCopies(book.getAvailableCopies() - 1);
+        }
 
         return Optional.of(this.bookRepository.save(book));
     }
